@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    line-height: 1.6;
+    background-color: #f8f9fa;
+  }
+  
+  h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #333;
+    padding-top: 30px;
+  }
+  
+  .section-content {
+    padding: 50px 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .container-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* กำหนดให้มี 3 คอลัมน์ต่อแถว */
+    gap: 20px;
+    justify-items: center;
+    max-width: 1200px; /* กำหนดความกว้างสูงสุดของ container */
+    max-height: 500;
+    margin: 0 auto; /* จัด container ให้อยู่กึ่งกลาง */
+  }
+  
+  .gallery-item {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.2);
+  }
+  
+  /* ป้องกันการบีบหรือยืดรูปภาพ */
+  .gallery-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* ให้ภาพแสดงในกรอบที่ถูกต้องโดยไม่บิดเบือน */
+    border-radius: 8px;
+  }
+  
+  /* สำหรับขนาดหน้าจอเล็ก ปรับ layout ให้เป็น 2 คอลัมน์ */
+  @media (max-width: 768px) {
+    .container-certificates {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* สำหรับขนาดหน้าจอเล็กมาก ปรับ layout ให้เป็น 1 คอลัมน์ */
+  @media (max-width: 480px) {
+    .container-certificates {
+      grid-template-columns: 1fr;
+    }
+  }
+   
+  .title-layout {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .title-text {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .name-layout {
+    padding-top: 5px;
+  }
+  
+  .name-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .ratio {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+  
+  .ratio img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 767px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-nav .nav-link {
+      font-size: 0.9rem;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .title-text {
+      font-size: 1rem;
+    }
+  
+    .name-text {
+      font-size: 0.9rem;
+    }
+  }
+  
